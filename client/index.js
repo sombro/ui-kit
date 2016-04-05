@@ -9,7 +9,6 @@ ReactDOM.render(
 		<fieldset>
 			<legend>Buttons</legend>
 			<h3>Default</h3>
-			<ButtonControl view="backLink">Кнопочка backLink</ButtonControl>
 			<ButtonControl view="crystal">Кнопочка crystal</ButtonControl>
 			<ButtonControl view="sand">Кнопочка sand</ButtonControl>
 			<ButtonControl view="sky">Кнопочка sky</ButtonControl>
@@ -17,7 +16,6 @@ ReactDOM.render(
 			<ButtonControl view="stone">Кнопочка stone</ButtonControl>
 			<ButtonControl view="blackLink">Кнопочка blackLink</ButtonControl>
 			<h3>With shadow</h3>
-			<ButtonControl view="backLink" shadow={true}>Кнопочка backLink</ButtonControl>
 			<ButtonControl view="crystal" shadow={true}>Кнопочка crystal</ButtonControl>
 			<ButtonControl view="sand" shadow={true}>Кнопочка sand</ButtonControl>
 			<ButtonControl view="sky" shadow={true}>Кнопочка sky</ButtonControl>
@@ -28,7 +26,6 @@ ReactDOM.render(
 			<ButtonControl view="sand" size="s">Кнопочка sand S</ButtonControl>
 			<ButtonControl view="sand" size="m">Кнопочка sand M</ButtonControl>
 			<h3>Disabled</h3>
-			<ButtonControl view="backLink" disabled>Кнопочка backLink</ButtonControl>
 			<ButtonControl view="crystal" disabled>Кнопочка crystal</ButtonControl>
 			<ButtonControl view="sand" disabled>Кнопочка sand</ButtonControl>
 			<ButtonControl view="sky" disabled>Кнопочка sky</ButtonControl>

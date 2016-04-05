@@ -12,7 +12,6 @@ const BUTTON_TYPES = [
     'forest',
     'stone',
     'blackLink',
-    'backLink',
 ];
 
 const BUTTON_SIZES = ['s', 'm'];

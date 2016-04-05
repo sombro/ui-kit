@@ -17,6 +17,10 @@
     padding: 0 20px 0 20px;
     font-family:  $Helvetica;
 
+    &:disabled {
+    	cursor: not-allowed;
+    }
+
     @include mobile {
         padding: 0;
     }
@@ -112,7 +116,6 @@
             background: #ffe49b;
             color: #a89253;
             border-color: #ffe49b;
-            cursor: not-allowed;
         }
 
         &:active {
@@ -147,30 +150,10 @@
         &:disabled {
             background: #dcdfe4;
             border-color: #dcdfe4;
-            cursor: not-allowed;
         }
     }
 
     &-blackLink {
-        color: #000;
-        text-decoration: none;
-
-        &:hover {
-            color: #000;
-            text-decoration: none;
-        }
-
-        &:active {
-            color: #000;
-        }
-
-        &:disabled {
-            color: #000;
-            cursor: not-allowed;
-        }
-    }
-
-    &-backLink {
         color: #000;
         text-decoration: none;
         background: none;
@@ -196,7 +179,6 @@
             box-shadow: none;
             background: #c7d9c8;
             color: #fff;
-            cursor: not-allowed;
         }
     }
 }
