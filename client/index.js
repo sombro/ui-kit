@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ButtonControl from 'components/ButtonControl';
+// import ButtonControl from 'components/ButtonControl';
+import {ButtonControl} from '../library';
 
 ReactDOM.render(
 	<div>
