@@ -1,0 +1,29 @@
+{
+  "name": "vv-ui-kit",
+  "version": "1.0.1",
+  "description": "An example module to test UI-kit via npm",
+  "author": "Nikita Buevich <nikitabuevich@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sombro/ui-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/sombro/ui-kit/issues"
+  },
+  "keywords": [
+    "ui-kit",
+    "vezet vsem"
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+  	"blacklist": "^1.1.2",
+    "classnames": "^2.2.3",
+    "react-addons-shallow-compare": "^0.14.8"
+  },
+  "devDependencies": {},
+  "private": false,
+  "analyze": true
+}

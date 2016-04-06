@@ -1,0 +1,43 @@
+@mixin title() {
+    font: 14px 'Roboto Slab', Helvetica, Arial, sans-serif;
+}
+
+@mixin subtitle() {
+    font: 14px Helvetica, Arial, sans-serif;
+}
+
+@mixin link() {
+    &, &:link {
+        color: blue;
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: red;
+    }
+}
+
+@mixin textarea() {
+  textarea:focus {
+    border: 1px solid #7290cb;
+  }
+}
+
+
+@mixin mobile {
+  @media (max-width: #{768px - 1px}) {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  @media (min-width: #{768px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{768px}) and (max-width: #{992px - 1px}) {
+    @content;
+  }
+}
