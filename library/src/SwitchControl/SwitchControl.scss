@@ -106,11 +106,11 @@ $button-size: 27px;
 
     &-input:disabled:checked ~ &-buttonwrapper &-track {
     	background-color: lighten($color-blue, 20%);
-    	border-color: $color-blue-disabled;
+    	border-color: lighten($color-blue, 15%);
     }
 
     &-input:disabled:checked ~ &-buttonwrapper &-button {
-        border-color: $color-blue-disabled;
+        border-color: lighten($color-blue, 15%);
     }
 
 

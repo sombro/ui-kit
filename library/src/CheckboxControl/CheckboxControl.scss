@@ -90,6 +90,11 @@
         border-color: #e4e4e4;
     }
 
+    &-input:checked:disabled ~ &-box {
+        background-color: lighten($color-brightGreen, 20%);
+        border-color: lighten($color-brightGreen, 20%);
+    }
+
     &-input:disabled ~ &-label,
     &-input:disabled ~ &-sublabel {
         color: #cccccc;
