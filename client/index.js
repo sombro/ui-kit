@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // import ButtonControl from 'components/ButtonControl';
-import {ButtonControl, CheckboxControl} from '../library';
+import {ButtonControl, CheckboxControl, SwitchControl} from '../library';
 import './index.scss';
 
 ReactDOM.render(
@@ -49,6 +49,27 @@ ReactDOM.render(
 			<CheckboxControl value={true} disabled/>
 			<CheckboxControl label="Checkbox label" disabled/>
 			<CheckboxControl label="Checkbox" subLabel="Checkbox sublabel" disabled/>
+		</fieldset>
+		<fieldset className="UIKit__switches">
+			<legend>Switch</legend>
+			<h3>Default</h3>
+			<SwitchControl/>
+			<SwitchControl checked={true}/>
+			<SwitchControl label="Switch label"/>
+			<h3>Sizes</h3>
+			<SwitchControl label="Switch label small" size="s"/>
+			<SwitchControl label="Switch label medium" size="m"/>
+			<SwitchControl label="Switch label large" size="l"/>
+			<h3>Label position top</h3>
+			<SwitchControl label="Switch label small" size="s" labelPos="top"/>
+			<SwitchControl label="Switch label medium" size="m" labelPos="top"/>
+			<SwitchControl label="Switch label large" size="l" labelPos="top"/>
+			<h3>Disabled</h3>
+			<SwitchControl disabled/>
+			<SwitchControl checked={true} disabled/>
+			<SwitchControl label="Switch label small" size="s" disabled/>
+			<SwitchControl label="Switch label medium" size="m" disabled/>
+			<SwitchControl label="Switch label large" size="l" disabled/>
 		</fieldset>
 	</div>,
 	document.getElementById('root')
