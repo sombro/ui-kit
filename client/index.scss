@@ -1,0 +1,27 @@
+@import './components/_global/fonts';
+
+.UIKit {
+	font-family: $Helvetica;
+
+	& h1 {
+		font-family: $RobotoSlab;
+		margin: 30px 0;
+	}
+	& h2,
+	& h3 {
+		font-family: $Roboto;
+	}
+
+	& fieldset {
+		margin-bottom: 60px;
+		padding: 0 30px 30px;
+	}
+
+	&__buttons .ButtonControl {
+		margin-right: 30px;
+	}
+
+	&__checkboxes .CheckboxControl{
+		margin-right: 40px;
+	}
+}

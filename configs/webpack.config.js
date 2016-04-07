@@ -26,6 +26,10 @@ module.exports = {
 	module: {
 		loaders: [
 			{
+                test: /\.(jpe?g|png|gif|svg)$/,
+                loader: 'file',
+            },
+			{
 				test: /\.js?$/,
 				exclude: /node_modules/,
 				loaders: ['babel'],
