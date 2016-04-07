@@ -1,18 +1,21 @@
 var gulp = require('gulp');
 var runSequence = require('gulp-run-sequence');
-var clean = require('gulp-clean');
 var babel = require('gulp-babel');
+var del = require('del');
 
 var paths = {
-	all: './client/components/**/*',
-	library: './library/src/',
-	scripts: './library/src/**/*.js',
+	all: ['./client/**/*', '!./client/index.js', '!./client/index.scss'],
+	library: './library/',
+	scripts: ['./library/**/*.js', '!./library/index.js'],
 };
 
 // Clear library
-gulp.task('clean', function () {
-	return gulp.src(paths.library, {read: false})
-		.pipe(clean());
+gulp.task('clean', function(cb) {
+    return del([
+    	paths.library + '*',
+    	'!' + paths.library + 'index.js',
+    	'!' + paths.library + 'package.json'
+    ], cb);
 });
 
 // Copy all files from components

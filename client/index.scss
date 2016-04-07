@@ -28,4 +28,10 @@
 	&__switches .SwitchControl{
 		margin-right: 40px;
 	}
+
+	&__inputs .InputControl{
+		display: block;
+		width: 300px;
+		margin-bottom: 20px;
+	}
 }

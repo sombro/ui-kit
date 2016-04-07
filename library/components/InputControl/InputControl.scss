@@ -1,0 +1,125 @@
+@import '../_global/mixins';
+@import '../_global/fonts';
+
+.InputControl {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    @include mobile() {
+        font-size: 15px;
+    }
+
+    &-label {
+        font-weight: normal;
+        color: #4b4b4b;
+
+        &-required {
+            color: #ff4254;
+        }
+
+        &--small {
+            font-weight: 400;
+            font-size: 12px;
+            color: #4b4b4b;
+            float: left;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-control {
+        line-height: 1.2;
+        width: 100%;
+        height: 34px;
+        padding: 0 10px;
+        background: transparent;
+        border-radius: 2px;
+        border: 1px solid #b7b7b7;
+        background-color: #fff;
+        outline: none;
+
+        &::-webkit-input-placeholder {
+            transition: opacity 0.3s;
+        }
+
+        &:focus {
+            border: 1px solid #7290cb;
+        }
+
+        &:disabled {
+        	background-color: lighten(#b7b7b7, 20%);
+        	cursor: not-allowed;
+        }
+
+        @include mobile() {
+            font-size: 15px;
+            height: 42px;
+        }
+    }
+
+    &-control--left {
+        text-align: left;
+    }
+
+    &-control--center {
+        text-align: center;
+    }
+
+    &-control--right {
+        text-align: right;
+    }
+
+    &.-success &-control {
+        padding-right: 32px;
+        background: url('./success.svg') no-repeat right 8px center;
+    }
+
+    &.-error &-control {
+        /*padding-right: 32px;*/
+        border: 1px solid #EF6342;
+    }
+
+    &-control::-webkit-outer-spin-button,
+    &-control::-webkit-inner-spin-button {
+        appearance: none;
+        -moz-appearance: textfield;
+        margin: 0;
+    }
+
+    &-error {
+        margin-top: 5px;
+        font-style: italic;
+        color: #EF6342;
+    }
+
+    &-help {
+    	font: 14px $HelveticaNeue;
+        margin-top: 5px;
+        font-style: italic;
+        font-weight: 300;
+        color: #8BA6E4;
+    }
+
+    &-helpText {
+        margin-right: 5px;
+    }
+
+    &-helpMail {
+        font-weight: 600;
+    }
+
+    &-helpYes,
+    &-helpNo {
+        font-weight: 600;
+        cursor: pointer;
+        border-bottom: 1px dotted #8BA6E4;
+    }
+
+    &-helpYes {
+        margin-right: 10px;
+    }
+
+}

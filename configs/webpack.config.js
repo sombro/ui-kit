@@ -19,10 +19,6 @@ module.exports = {
 		],
 	},
 	devtool: '#inline-source-map',
-	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
-	],
 	module: {
 		loaders: [
 			{
@@ -53,4 +49,21 @@ module.exports = {
 			autoprefixer({ browsers: ['last 2 versions', 'ie 9'] }),
 		]
 	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoErrorsPlugin(),
+		new webpack.ProgressPlugin(function(percentage, message) {
+            var MOVE_LEFT = new Buffer('1b5b3130303044', 'hex').toString();
+            var CLEAR_LINE = new Buffer('1b5b304b', 'hex').toString();
+            process.stdout.write(CLEAR_LINE + Math.round(percentage * 100) + '% :' + message + MOVE_LEFT);
+        }),
+        function() {
+            this.plugin('done', function(stats) {
+                console.log(stats.toString({
+                    chunks: false,
+                    colors: true,
+                }));
+            });
+        },
+	],
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import ButtonControl from 'components/ButtonControl';
+import InputControl from 'components/InputControl';
 import {ButtonControl, CheckboxControl, SwitchControl} from '../library';
 import './index.scss';
 
@@ -70,6 +70,27 @@ ReactDOM.render(
 			<SwitchControl label="Switch label small" size="s" disabled/>
 			<SwitchControl label="Switch label medium" size="m" disabled/>
 			<SwitchControl label="Switch label large" size="l" disabled/>
+		</fieldset>
+		<fieldset className="UIKit__inputs">
+			<legend>Input</legend>
+			<h3>Default</h3>
+			<InputControl placeholder="Input type text"/>
+			<InputControl htmlType="password" placeholder="Input type password"/>
+			<InputControl htmlType="number" placeholder="Input type number"/>
+			<InputControl htmlType="email" placeholder="Input type email"/>
+			<h3>Textalign</h3>
+			<InputControl textalign="left" placeholder="Input textalign left"/>
+			<InputControl textalign="center" placeholder="Input textalign center"/>
+			<InputControl textalign="right" placeholder="Input textalign right"/>
+			<h3>With label</h3>
+			<InputControl label="Small label for input" labelSize="small" placeholder="Input text"/>
+			<InputControl label="Normal label for input" labelSize="normal" placeholder="Input text"/>
+			<h3>Required, success and error</h3>
+			<InputControl label="Label for required input" required={true} placeholder="Input text"/>
+			<InputControl success={true} placeholder="Success input text"/>
+			<InputControl error="Text of error for input" placeholder="Error input text"/>
+			<h3>Disabled</h3>
+			<InputControl disabled placeholder="Input text"/>
 		</fieldset>
 	</div>,
 	document.getElementById('root')
