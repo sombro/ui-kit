@@ -1,0 +1,115 @@
+@import '../_global/mixins';
+
+$button-radius: 3px;
+
+.CounterControl {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+
+    @include mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    };
+
+    &-control,
+    &-button {
+        display: inline-block;
+        width: 40px;
+        height: 34px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        font-size: 16px;
+        text-align: center;
+        border: 1px #b8b7b7 solid;
+        background-color: #fff;
+
+        @include mobile {
+            height: 42px;
+        };
+    }
+
+    &-control {
+        border-right: none;
+        border-left: none;
+        outline: none;
+        appearance: none;
+        -moz-appearance: textfield;
+        border-radius: 0;
+    }
+
+    &-control::-webkit-outer-spin-button,
+    &-control::-webkit-inner-spin-button {
+        appearance: none;
+        -moz-appearance: textfield;
+        margin: 0;
+    }
+
+    &-label {
+        margin-bottom: 5px;
+        color: #4b4b4b;
+        text-align: left;
+
+        @include mobile {
+            display: inline;
+            padding: 0;
+        };
+    }
+
+    &-counter {
+        @include mobile {
+            display: inline;
+        };
+    }
+
+    &-button {
+        position: relative;
+        color: #7290cb;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.1s ease-out;
+    }
+
+    &-increaseButton {
+        border-top-right-radius: $button-radius;
+        border-bottom-right-radius: $button-radius;
+    }
+
+    &-decreaseButton {
+        border-top-left-radius: $button-radius;
+        border-bottom-left-radius: $button-radius;
+    }
+
+    &-button:hover {
+        border-color: #708dc9;
+        background-color: #708dc9;
+    }
+
+    &-button:hover &-icon {
+        fill: #fff;
+    }
+
+    &-icon {
+        width: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        fill: #7290cb;
+        transition: fill 0.1s ease-out;
+    }
+
+    &-button.-disabled &-icon {
+        fill: #b8b7b7;
+    }
+
+    &-button.-disabled {
+        pointer-events: none;
+    }
+}
+
+.CounterControl-increaseButton,
+.CounterControl-decreaseButton {
+    @extend .CounterControl-button;
+}

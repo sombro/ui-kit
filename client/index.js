@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import InputControl from 'components/InputControl';
-import {ButtonControl, CheckboxControl, SwitchControl} from '../library';
+// import InputControl from 'components/InputControl';
+import {
+			ButtonControl,
+			CheckboxControl,
+			SwitchControl,
+			InputControl,
+			CounterControl
+		} from '../library';
 import './index.scss';
 
 ReactDOM.render(
 	<div className="UIKit">
 		<h1>Dieses UI-Kit!</h1>
-		<fieldset className="UIKit__buttons">
+		<ol className="UIKit__menu">
+			<li><a href="#UIKit__buttons">Button</a></li>
+			<li><a href="#UIKit__checkboxes">Checkbox</a></li>
+			<li><a href="#UIKit__switches">Switch</a></li>
+			<li><a href="#UIKit__inputs">Input</a></li>
+			<li><a href="#UIKit__counter">Counter</a></li>
+		</ol>
+		<fieldset className="UIKit__buttons" id="UIKit__buttons">
 			<legend>Buttons</legend>
 			<h3>Default</h3>
 			<ButtonControl view="crystal">Button crystal</ButtonControl>
@@ -37,7 +50,7 @@ ReactDOM.render(
 			<h3>With link</h3>
 			<ButtonControl view="sand" href="#">Button sand</ButtonControl>
 		</fieldset>
-		<fieldset className="UIKit__checkboxes">
+		<fieldset className="UIKit__checkboxes" id="UIKit__checkboxes">
 			<legend>Checkbox</legend>
 			<h3>Default</h3>
 			<CheckboxControl/>
@@ -50,7 +63,7 @@ ReactDOM.render(
 			<CheckboxControl label="Checkbox label" disabled/>
 			<CheckboxControl label="Checkbox label" subLabel="Checkbox sublabel" disabled/>
 		</fieldset>
-		<fieldset className="UIKit__switches">
+		<fieldset className="UIKit__switches" id="UIKit__switches">
 			<legend>Switch</legend>
 			<h3>Default</h3>
 			<SwitchControl/>
@@ -71,7 +84,7 @@ ReactDOM.render(
 			<SwitchControl label="Switch label medium" size="m" disabled/>
 			<SwitchControl label="Switch label large" size="l" disabled/>
 		</fieldset>
-		<fieldset className="UIKit__inputs">
+		<fieldset className="UIKit__inputs" id="UIKit__inputs">
 			<legend>Input</legend>
 			<h3>Default</h3>
 			<InputControl placeholder="Input type text"/>
@@ -91,6 +104,11 @@ ReactDOM.render(
 			<InputControl error="Text of error for input" placeholder="Error input text"/>
 			<h3>Disabled</h3>
 			<InputControl disabled placeholder="Input text"/>
+		</fieldset>
+		<fieldset className="UIKit__counter" id="UIKit__counter">
+			<legend>CounterControl</legend>
+			<h3>Default</h3>
+			<CounterControl/>
 		</fieldset>
 	</div>,
 	document.getElementById('root')

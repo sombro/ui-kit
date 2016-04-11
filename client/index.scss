@@ -12,6 +12,14 @@
 		font-family: $Roboto;
 	}
 
+	&__menu {
+		margin: 50px 0 100px 0;
+	}
+
+	&__menu li {
+		margin-bottom: 10px;
+	}
+
 	& fieldset {
 		margin-bottom: 60px;
 		padding: 0 30px 30px;

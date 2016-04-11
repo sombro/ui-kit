@@ -1,0 +1,4 @@
+{
+    "name": "CounterControl",
+    "main": "./CounterControl.js"
+}
