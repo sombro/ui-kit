@@ -184,7 +184,7 @@ ReactDOM.render(
 						},
 					}
 				}
-				name="RadioGroup2"
+				name="RadioGroup3"
 				disabled/>
 		</fieldset>
 	</div>,
