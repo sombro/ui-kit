@@ -29,17 +29,29 @@
 		margin-right: 30px;
 	}
 
-	&__checkboxes .CheckboxControl{
+	&__checkboxes .CheckboxControl {
 		margin-right: 40px;
 	}
 
-	&__switches .SwitchControl{
+	&__switches .SwitchControl {
 		margin-right: 40px;
 	}
 
-	&__inputs .InputControl{
+	&__inputs .InputControl {
 		display: block;
 		width: 300px;
 		margin-bottom: 20px;
+	}
+
+	&__radio &__radio-group {
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__radio .RadioControl {
+		margin-right: 20px;
 	}
 }

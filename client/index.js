@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import InputControl from 'components/InputControl';
+// import RadioGroup from 'components/RadioControl';
 import {
 			ButtonControl,
 			CheckboxControl,
 			SwitchControl,
 			InputControl,
-			CounterControl
+			CounterControl,
+			RadioGroup
 		} from '../library';
 import './index.scss';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
 			<li><a href="#UIKit__switches">Switch</a></li>
 			<li><a href="#UIKit__inputs">Input</a></li>
 			<li><a href="#UIKit__counter">Counter</a></li>
+			<li><a href="#UIKit__radio">Radio</a></li>
 		</ol>
 		<fieldset className="UIKit__buttons" id="UIKit__buttons">
 			<legend>Buttons</legend>
@@ -109,6 +111,81 @@ ReactDOM.render(
 			<legend>CounterControl</legend>
 			<h3>Default</h3>
 			<CounterControl/>
+		</fieldset>
+		<fieldset className="UIKit__radio" id="UIKit__radio">
+			<legend>Radio</legend>
+			<h3>Default</h3>
+			<RadioGroup className="UIKit__radio-group" groupAttributes={
+					{
+						radio1: {
+							checked: false,
+							label: 'Label1 Group1',
+							subLabel: 'Sublabel',
+							value: 'value1',
+						},
+						radio2: {
+							checked: true,
+							label: 'Label2 Group1',
+							subLabel: 'Sublabel',
+							value: 'value2',
+						},
+						radio3: {
+							checked: false,
+							label: 'Label3 Group1',
+							subLabel: 'Sublabel',
+							value: 'value3',
+						},
+						radio4: {
+							checked: false,
+							label: 'Label4 Group1',
+							subLabel: 'Sublabel',
+							value: 'value4',
+						},
+					}
+				}
+				name="RadioGroup1"/>
+			<RadioGroup className="UIKit__radio-group" groupAttributes={
+					{
+						radio1: {
+							checked: false,
+							label: 'Label1 Group2',
+							value: 'value1',
+						},
+						radio2: {
+							checked: false,
+							label: 'Label2 Group2',
+							value: 'value2',
+						},
+						radio3: {
+							checked: false,
+							label: 'Label3 Group2',
+							value: 'value3',
+						},
+					}
+				}
+				name="RadioGroup2"/>
+			<h3>Disabled</h3>
+			<RadioGroup className="UIKit__radio-group" groupAttributes={
+					{
+						radio1: {
+							checked: false,
+							label: 'Label1',
+							value: 'value1',
+						},
+						radio2: {
+							checked: false,
+							label: 'Label2',
+							value: 'value2',
+						},
+						radio3: {
+							checked: false,
+							label: 'Label3',
+							value: 'value3',
+						},
+					}
+				}
+				name="RadioGroup2"
+				disabled/>
 		</fieldset>
 	</div>,
 	document.getElementById('root')

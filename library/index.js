@@ -6,4 +6,5 @@ module.exports = {
 	SwitchControl: require('./components/SwitchControl'),
 	InputControl: require('./components/InputControl'),
 	CounterControl: require('./components/CounterControl'),
+	RadioGroup: require('./components/RadioControl'),
 };
