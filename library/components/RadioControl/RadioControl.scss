@@ -77,6 +77,11 @@
 		box-shadow: 0 0 0 1px #ccc;
 	}
 
+	&-input:checked:disabled ~ &-box {
+		background-color: lighten(rgb(114, 144, 203), 20%);
+		box-shadow: 0 0 0 1px lighten(rgb(114, 144, 203), 20%);
+	}
+
 	&-input:disabled ~ &-label,
 	&-input:disabled ~ &-sublabel {
 		color: #ccc;

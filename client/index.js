@@ -173,7 +173,7 @@ ReactDOM.render(
 							value: 'value1',
 						},
 						radio2: {
-							checked: false,
+							checked: true,
 							label: 'Label2',
 							value: 'value2',
 						},
